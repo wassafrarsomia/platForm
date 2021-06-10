@@ -1,0 +1,9 @@
+Documentation/assets/js
+# Ignore artifacts:
+build
+coverage
+
+# Ignore all HTML files:
+*.html
+*.js
+
