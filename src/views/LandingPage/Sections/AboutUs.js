@@ -25,10 +25,13 @@ import styles from "assets/jss/material-kit-react/views/landingPageSections/prod
 import InfoArea from "components/InfoArea/InfoArea";
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import SectionDownload from "../../Components/Sections/SectionDownload";
+import { useHistory } from "react-router";
 const useStyles = makeStyles(styles);
 
 export default function ProductSection() {
   const classes = useStyles();
+  const history = useHistory();
+
   return (
     <div className={classes.section}>
       <GridContainer justify="center">
@@ -75,7 +78,7 @@ export default function ProductSection() {
         <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>Nos services</h2>
-          <GridItem xs={12} sm={8} md={12}>
+          <GridItem xs={12} sm={12} md={12}>
             <Button
               color="primary"
               size="lg"
@@ -87,6 +90,7 @@ export default function ProductSection() {
               color="rose"
               size="lg"
               target="_blank"
+              onClick={()=>{history.push("/login-page")}}
             >
               
               Vendez vos produits
@@ -95,6 +99,8 @@ export default function ProductSection() {
               color="warning"
               size="lg"
               target="_blank"
+              onClick={()=>{history.push("/login-page")}}
+
             >
              Parcourez nos produits
             </Button>
