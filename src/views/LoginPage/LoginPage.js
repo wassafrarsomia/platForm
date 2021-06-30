@@ -32,7 +32,7 @@ export default function LoginPage(props) {
   const history = useHistory()
   setTimeout(function () {
     setCardAnimation("");
-  }, 700);
+  }, 200);
   const classes = useStyles();
   const { ...rest } = props;
   return (

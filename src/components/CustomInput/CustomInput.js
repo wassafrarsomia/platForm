@@ -24,6 +24,8 @@ export default function CustomInput(props) {
     error,
     white,
     inputRootCustomClasses,
+    onChange,
+    value,
     success,
   } = props;
 
@@ -71,6 +73,8 @@ export default function CustomInput(props) {
           disabled: classes.disabled,
           underline: underlineClasses,
         }}
+        value={value}
+        onChange={onChange}
         id={id}
         {...inputProps}
       />
@@ -88,4 +92,6 @@ CustomInput.propTypes = {
   error: PropTypes.bool,
   success: PropTypes.bool,
   white: PropTypes.bool,
+  value:PropTypes.any,
+  onChange:PropTypes.any
 };

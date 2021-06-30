@@ -17,27 +17,55 @@ import image from "assets/img/loginPic.jpg";
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import BootstrapTable from 'react-bootstrap-table-next';
 import AddBoxIcon from '@material-ui/icons/AddBox';
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton } from "@material-ui/core";
-import CustomInput from "components/CustomInput/CustomInput";
+//import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton, Select } from "@material-ui/core";
+// import CustomInput from "components/CustomInput/CustomInput";
+// import MenuItem from '@material-ui/core/MenuItem';
+// import InputLabel from '@material-ui/core/InputLabel';
+// import classNames from "classnames";
+// import FormControl from '@material-ui/core/FormControl';
+import EditIcon from '@material-ui/icons/Edit';
+import {IconButton} from  "@material-ui/core"
+import DialogForm from "./dialog"
+import DeleteIcon from '@material-ui/icons/Delete';
 const columns = [{
-    dataField: 'Produit',
+    dataField: 'produit',
     text: 'Produit'
   }, {
     dataField: 'quantite',
     text: 'Quantité'
   }, {
-    dataField: 'Prix',
+    dataField: 'prix',
     text: 'Prix'
   },
   {
-    dataField: 'Prix',
-    text: 'Actions'
-  }];
+    dataField: 'Actions',
+    text: 'Actions',
+    formatter: function OrderItems (){
+            return (
+              <>
+              <EditIcon color="primary"/>
+              <DeleteIcon color='error'/>
+              </>
+            )
+      }
+  }
+];
 const useStyles = makeStyles(styles);
 
 export default function LoginPage() {
+    {/* prettier-ignore */}
   const classes = useStyles();
   const[open , setOpen]=useState(false)
+  // const[prix,setPrix]=useState(null)
+  // const[quantite,setQuantite]=useState(null)
+  // const[produit,setProduit]=useState(null)
+  // console.log('priix',prix)
+  const [data,setData]=useState([])
+  // const handleSubmit=()=>{
+  //   setData([...data, {produit,prix,quantite}])
+  //   setOpen(false)
+  // }
+  console.log('dataaa',data)
   return (
     <div>
       <div
@@ -58,45 +86,14 @@ export default function LoginPage() {
                 </CardHeader>
                 </form>
                 <GridItem xs={12} sm={12} md={3}>
-                <IconButton onClick={()=>setOpen(true)}> <AddBoxIcon color="secondary" /> </IconButton >
+                <IconButton size="medium" onClick={()=>setOpen(true)}> <AddBoxIcon fontSize="large" color="secondary" /> </IconButton >
                 </GridItem>
-                <BootstrapTable keyField='id' data={ [] } columns={ columns } />
+                <BootstrapTable keyField='id' data={data } columns={ columns } />
        
               </Card>
 
             </GridItem>
-            <Dialog aria-labelledby="simple-dialog-title" open={open}>
-                <DialogTitle id="simple-dialog-title">Ajout d un produit</DialogTitle>
-                <DialogContent>
-                <CustomInput
-                      labelText="Produit"
-                      id="cin"
-                      formControlProps={{
-                        fullWidth: true,
-                      }}
-                    />
-                       <CustomInput
-                      labelText="Quantité"
-                      formControlProps={{
-                        fullWidth: true,
-                      }}
-                    />
-                       <CustomInput
-                      labelText="Prix"
-                      formControlProps={{
-                        fullWidth: true,
-                      }}
-                    />
-                     </DialogContent>
-                    <DialogActions>
-                <Button autoFocus onClick={()=>setOpen(false)} color="primary">
-                  Annuler
-                </Button>
-                <Button onClick={()=>setOpen(false)} color="primary">
-                  Ajouter
-                </Button>
-              </DialogActions>
-              </Dialog>
+           <DialogForm open ={open} setOpen={setOpen} data={data} setData={setData}/>
           </GridContainer>
         </div>
         <Footer whiteFont />
