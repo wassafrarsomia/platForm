@@ -31,4 +31,4 @@ build
 coverage
 
 # Ignore all HTML files:
-*.html 
+# *.html 
