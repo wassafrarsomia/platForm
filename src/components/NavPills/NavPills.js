@@ -68,14 +68,13 @@ export default function NavPills(props) {
   const tabContent = (
     <div className={classes.contentWrapper}>
       {tabs.map((prop, key) => {
-        if (key === active) {
+      
           return (
             <div className={classes.tabContent} key={key}>
               {prop.tabContent}
             </div>
           );
-        }
-        return null;
+       
       })}
     </div>
   );

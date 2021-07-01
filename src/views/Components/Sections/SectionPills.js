@@ -1,188 +1,108 @@
-import React from "react";
+import React, { useState } from "react";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
 // @material-ui/icons
-import Dashboard from "@material-ui/icons/Dashboard";
-import Schedule from "@material-ui/icons/Schedule";
-import List from "@material-ui/icons/List";
+import friseImage from "assets/img/frises.jpg"
+
 
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import NavPills from "components/NavPills/NavPills.js";
 
 import styles from "assets/jss/material-kit-react/views/componentsSections/pillsStyle.js";
+import { FormControl, Grid, InputLabel, MenuItem, Select } from "@material-ui/core";
 
 const useStyles = makeStyles(styles);
 
 export default function SectionPills() {
   const classes = useStyles();
+  const [produit, setProduit]=useState(null)
+  const [region, setRegion]=useState(null)
+
+  const [ville, setVille]=useState(null)
+
   return (
-    <div className={classes.section}>
+    // <div className={classes.section}>
       <div className={classes.container}>
         <div id="navigation-pills">
-          <div className={classes.title}>
-            <h3>Navigation Pills</h3>
-          </div>
-          <div className={classes.title}>
-            <h3>
-              <small>With Icons</small>
-            </h3>
-          </div>
-          <GridContainer>
-            <GridItem xs={12} sm={12} md={8} lg={6}>
-              <NavPills
-                color="primary"
-                tabs={[
-                  {
-                    tabButton: "Dashboard",
-                    tabIcon: Dashboard,
-                    tabContent: (
-                      <span>
-                        <p>
-                          Collaboratively administrate empowered markets via
-                          plug-and-play networks. Dynamically procrastinate B2C
-                          users after installed base benefits.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically visualize customer directed convergence
-                          without revolutionary ROI. Collaboratively
-                          administrate empowered markets via plug-and-play
-                          networks. Dynamically procrastinate B2C users after
-                          installed base benefits.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically visualize customer directed convergence
-                          without revolutionary ROI. Collaboratively
-                          administrate empowered markets via plug-and-play
-                          networks. Dynamically procrastinate B2C users after
-                          installed base benefits.
-                        </p>
-                      </span>
-                    ),
-                  },
-                  {
-                    tabButton: "Schedule",
-                    tabIcon: Schedule,
-                    tabContent: (
-                      <span>
-                        <p>
-                          Efficiently unleash cross-media information without
-                          cross-media value. Quickly maximize timely
-                          deliverables for real-time schemas.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically maintain clicks-and-mortar solutions
-                          without functional solutions. Dramatically visualize
-                          customer directed convergence without revolutionary
-                          ROI. Collaboratively administrate empowered markets
-                          via plug-and-play networks. Dynamically procrastinate
-                          B2C users after installed base benefits.
-                        </p>
-                      </span>
-                    ),
-                  },
-                  {
-                    tabButton: "Tasks",
-                    tabIcon: List,
-                    tabContent: (
-                      <span>
-                        <p>
-                          Collaboratively administrate empowered markets via
-                          plug-and-play networks. Dynamically procrastinate B2C
-                          users after installed base benefits.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically visualize customer directed convergence
-                          without revolutionary ROI. Collaboratively
-                          administrate empowered markets via plug-and-play
-                          networks. Dynamically procrastinate B2C users after
-                          installed base benefits.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically visualize customer directed convergence
-                          without revolutionary ROI. Collaboratively
-                          administrate empowered markets via plug-and-play
-                          networks. Dynamically procrastinate B2C users after
-                          installed base benefits.
-                        </p>
-                      </span>
-                    ),
-                  },
-                ]}
-              />
+        <Grid container justify='center' spacing={1} style={{marginBottom:'3%'}}> 
+        <Grid item xs={3}> 
+              <FormControl style={{width:"100%"}}>
+                    <InputLabel      
+                      style={{ 
+                        fontWeight: "400",
+                        fontSize: "14px",}}
+                    >Produit
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-label"
+                      id="demo-simple-select"
+                      value={produit}
+                      onChange={(event)=>{setProduit(event.target.value)}}
+                    >
+                      <MenuItem value={"Frise"}>Frise</MenuItem>
+                      <MenuItem value={"Tomate"}>Tomate</MenuItem>
+                      <MenuItem value={"Orange"}>Orange</MenuItem>
+                    </Select>
+                  </FormControl>
+        </Grid>
+        <Grid item xs={3}> 
+        <FormControl style={{width:"100%"}}>
+                    <InputLabel      
+                      style={{ 
+                        fontWeight: "400",
+                        fontSize: "14px",}}
+                    >Region
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-label"
+                      id="demo-simple-select"
+                      value={region}
+                      onChange={(event)=>{setRegion(event.target.value)}}
+                    >
+                      <MenuItem value={"Casablanca"}>Casablanca</MenuItem>
+                    </Select>
+                  </FormControl>
+        </Grid>
+        <Grid item xs={3}> 
+        <FormControl style={{width:"100%"}}>
+                    <InputLabel      
+                      style={{ 
+                        fontWeight: "400",
+                        fontSize: "14px",}}
+                    >Ville
+                    </InputLabel>
+                    <Select
+                      labelId="demo-simple-select-label"
+                      id="demo-simple-select"
+                      value={ville}
+                      onChange={(event)=>{setVille(event.target.value)}}
+                    >
+                      <MenuItem value={"Casebanca"}>Casebanca</MenuItem>
+                    </Select>
+                  </FormControl>
+        </Grid>
+        </Grid>
+      {produit =="Frise" ?  <GridContainer>
+            <GridItem xs={12} sm={12} md={8} lg={5}>
+            <img
+            style={{width:"100%", marginBottom:"5%"}}
+                    src={friseImage}
+                     />
             </GridItem>
-            <GridItem xs={12} sm={12} md={12} lg={6}>
-              <NavPills
-                color="rose"
-                horizontal={{
-                  tabsGrid: { xs: 12, sm: 4, md: 4 },
-                  contentGrid: { xs: 12, sm: 8, md: 8 },
-                }}
-                tabs={[
-                  {
-                    tabButton: "Dashboard",
-                    tabIcon: Dashboard,
-                    tabContent: (
-                      <span>
-                        <p>
-                          Collaboratively administrate empowered markets via
-                          plug-and-play networks. Dynamically procrastinate B2C
-                          users after installed base benefits.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically visualize customer directed convergence
-                          without revolutionary ROI. Collaboratively
-                          administrate empowered markets via plug-and-play
-                          networks. Dynamically procrastinate B2C users after
-                          installed base benefits.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically visualize customer directed convergence
-                          without revolutionary ROI. Collaboratively
-                          administrate empowered markets via plug-and-play
-                          networks. Dynamically procrastinate B2C users after
-                          installed base benefits.
-                        </p>
-                      </span>
-                    ),
-                  },
-                  {
-                    tabButton: "Schedule",
-                    tabIcon: Schedule,
-                    tabContent: (
-                      <span>
-                        <p>
-                          Efficiently unleash cross-media information without
-                          cross-media value. Quickly maximize timely
-                          deliverables for real-time schemas.
-                        </p>
-                        <br />
-                        <p>
-                          Dramatically maintain clicks-and-mortar solutions
-                          without functional solutions. Dramatically visualize
-                          customer directed convergence without revolutionary
-                          ROI. Collaboratively administrate empowered markets
-                          via plug-and-play networks. Dynamically procrastinate
-                          B2C users after installed base benefits.
-                        </p>
-                      </span>
-                    ),
-                  },
-                ]}
-              />
+            <GridItem xs={12} sm={12} md={12} lg={7}>
+            <p> <strong color="secondary">Nom de produit: </strong> frise <br/><br/>
+            <strong color="secondary">Quantité: </strong> 12kg <br/><br/>
+            <strong color="secondary">Prix par kg: </strong> 10 dh <br/><br/>
+            <strong color="secondary">Nom de l agriculteur: </strong> Khadija bairouk <br/><br/>
+            <strong color="secondary">Numero de téléphone: </strong> 0633449878 <br/><br/>
+            <strong color="secondary">Région: </strong> Casablanca <br/></p> 
+
             </GridItem>
-          </GridContainer>
+          </GridContainer>: null } 
         </div>
-      </div>
+      {/* </div> */}
     </div>
   );
 }

@@ -18,11 +18,15 @@ import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 import CardFooter from "components/Card/CardFooter.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
+import DropDown from "components/CustomInput/DropDownList";
+
 import PhoneIcon from '@material-ui/icons/Phone';
 import styles from "assets/jss/material-kit-react/views/loginPage.js";
 import RecentActorsIcon from '@material-ui/icons/RecentActors';
 import image from "assets/img/loginPic.jpg";
 import { useHistory } from "react-router";
+import LogoWeb from "assets/img/logosite.PNG"
+
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 const useStyles = makeStyles(styles);
 
@@ -59,7 +63,7 @@ export default function LoginPage(props) {
                 <form className={classes.form}>
                   <CardHeader color="success" className={classes.cardHeader}>
                     <h4>Login</h4>
-                    <div className={classes.socialLine}>
+                    {/* <div className={classes.socialLine}>
                       <Button
                         justIcon
                         href="#pablo"
@@ -87,9 +91,13 @@ export default function LoginPage(props) {
                       >
                         <i className={"fab fa-google-plus-g"} />
                       </Button>
-                    </div>
+                    </div> */}
                   </CardHeader>
-                  <p className={classes.divider}>AgriWeb</p>
+                  <p className={classes.divider}>
+                  <img
+                    src={LogoWeb}
+                     />
+                  </p>
                   <CardBody>
                  { login &&  <CustomInput
                       labelText="Nom et prénom..."
@@ -151,6 +159,13 @@ export default function LoginPage(props) {
                             <LocationOnIcon className={classes.inputIconsColor} />
                           </InputAdornment>
                         ),
+                      }}
+                    />
+                      <DropDown
+                      labelText="Region"
+                      id="region"
+                      formControlProps={{
+                        fullWidth: true,
                       }}
                     />
                       </>
