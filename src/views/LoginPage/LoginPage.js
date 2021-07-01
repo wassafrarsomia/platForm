@@ -23,7 +23,7 @@ import styles from "assets/jss/material-kit-react/views/loginPage.js";
 import RecentActorsIcon from '@material-ui/icons/RecentActors';
 import image from "assets/img/loginPic.jpg";
 import { useHistory } from "react-router";
-
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 const useStyles = makeStyles(styles);
 
 export default function LoginPage(props) {
@@ -121,7 +121,9 @@ export default function LoginPage(props) {
                         ),
                       }}
                     />
-                   { login &&        <CustomInput
+                   { login &&  
+                    <>
+                   <CustomInput
                       labelText="Téléphone..."
                       id="phone"
                       formControlProps={{
@@ -135,7 +137,24 @@ export default function LoginPage(props) {
                           </InputAdornment>
                         ),
                       }}
-                    />}
+                    />
+                    <CustomInput
+                      labelText="Adresse..."
+                      id="adresse"
+                      formControlProps={{
+                        fullWidth: true,
+                      }}
+                      inputProps={{
+                        type: "adresse",
+                        endAdornment: (
+                          <InputAdornment position="end">
+                            <LocationOnIcon className={classes.inputIconsColor} />
+                          </InputAdornment>
+                        ),
+                      }}
+                    />
+                      </>
+                    }
                     <CustomInput
                       labelText="mot de passe"
                       id="pass"
