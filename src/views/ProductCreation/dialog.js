@@ -58,7 +58,7 @@ export default function DialogForm({data,setData,open,setOpen}) {
                      }}
                       onChange={(event)=>{setProduit(event.target.value)}}
                     >
-                      <MenuItem value={"Pomme"}>Frise</MenuItem>
+                      <MenuItem value={"Fraise"}>Fraise</MenuItem>
                       <MenuItem value={"Tomate"}>Tomate</MenuItem>
                       <MenuItem value={"Orange"}>Orange</MenuItem>
                     </Select>

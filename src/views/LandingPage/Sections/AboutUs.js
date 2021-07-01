@@ -99,7 +99,7 @@ export default function ProductSection() {
               color="warning"
               size="lg"
               target="_blank"
-              onClick={()=>{history.push("/login-page")}}
+              onClick={()=>{history.push("/consultProduct-page")}}
 
             >
              Parcourez nos produits

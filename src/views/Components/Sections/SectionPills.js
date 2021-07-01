@@ -41,7 +41,7 @@ export default function SectionPills() {
                       value={produit}
                       onChange={(event)=>{setProduit(event.target.value)}}
                     >
-                      <MenuItem value={"Frise"}>Frise</MenuItem>
+                      <MenuItem value={"Fraise"}>Fraise</MenuItem>
                       <MenuItem value={"Tomate"}>Tomate</MenuItem>
                       <MenuItem value={"Orange"}>Orange</MenuItem>
                     </Select>
@@ -84,7 +84,7 @@ export default function SectionPills() {
                   </FormControl>
         </Grid>
         </Grid>
-      {produit =="Frise" ?  <GridContainer>
+      {produit =="Fraise" ?  <GridContainer>
             <GridItem xs={12} sm={12} md={8} lg={5}>
             <img
             style={{width:"100%", marginBottom:"5%"}}
@@ -92,10 +92,10 @@ export default function SectionPills() {
                      />
             </GridItem>
             <GridItem xs={12} sm={12} md={12} lg={7}>
-            <p> <strong color="secondary">Nom de produit: </strong> frise <br/><br/>
-            <strong color="secondary">Quantité: </strong> 12kg <br/><br/>
+            <p> <strong color="secondary">Nom de produit: </strong> Fraise <br/><br/>
+            <strong color="secondary">Quantité: </strong> 200kg <br/><br/>
             <strong color="secondary">Prix par kg: </strong> 10 dh <br/><br/>
-            <strong color="secondary">Nom de l agriculteur: </strong> Khadija bairouk <br/><br/>
+            <strong color="secondary">Nom de l agriculteur: </strong> Khadija Bayrouk <br/><br/>
             <strong color="secondary">Numero de téléphone: </strong> 0633449878 <br/><br/>
             <strong color="secondary">Région: </strong> Casablanca <br/></p> 
 
