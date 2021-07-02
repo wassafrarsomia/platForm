@@ -37,52 +37,52 @@ export default function HeaderLinks(props) {
         />
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          href="/"
+        <a
           color="transparent"
-          target="_blank"
+          // target="_blank"
           className={classes.navLink}
+          href="#acceuil"
         >
           <WebIcon className={classes.icons} /> Acceuil
-        </Button>
+        </a>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="/"
+          // href="/"
           color="transparent"
-          target="_blank"
+          // target="_blank"
           className={classes.navLink}
         >
           <PeopleAltIcon  className={classes.icons} /> Nos collaborations
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          href="/"
+        <a
           color="transparent"
-          target="_blank"
+          // target="_blank"
           className={classes.navLink}
+          href="#div_id"
         >
           <WorkIcon   className={classes.icons} />Nos services
-        </Button>
+        </a>
       
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Button
-          href="/"
+        <a
           color="transparent"
-          target="_blank"
+          // target="_blank"
           className={classes.navLink}
+          href="#div_id"
         >
           <PhoneAndroidIcon   className={classes.icons} />Contactez-nous
-        </Button>
+        </a>
       
       </ListItem>
       <ListItem className={classes.listItem}>
         <Button
-          href="/"
+          href="/login-page"
           color="transparent"
-          target="_blank"
+        //  target="_blank"
           className={classes.navLink}
         >
           <ContactsIcon   className={classes.icons} />Se connecter

@@ -33,7 +33,7 @@ export default function ProductSection() {
   const history = useHistory();
 
   return (
-    <div className={classes.section}>
+    <div className={classes.section} id="acceuil" >
       <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
           <h2 className={classes.title}>A propos de nous!</h2>
@@ -47,7 +47,7 @@ export default function ProductSection() {
 
         </GridItem>
       </GridContainer>
-      <div>
+      <div id="div_id">
         <GridContainer>
           <GridItem xs={12} sm={12} md={4}>
             <InfoAreaWithImg
@@ -77,7 +77,7 @@ export default function ProductSection() {
         </GridContainer>
         <GridContainer justify="center">
         <GridItem xs={12} sm={12} md={8}>
-          <h2 className={classes.title}>Nos services</h2>
+          <h2 className={classes.title} >Nos services</h2>
           <GridItem xs={12} sm={12} md={12}>
             <Button
               color="primary"
