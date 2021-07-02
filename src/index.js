@@ -12,7 +12,7 @@ import ProfilePage from "views/ProfilePage/ProfilePage.js";
 import LoginPage from "views/LoginPage/LoginPage.js";
 import ProductPage from "views/ProductCreation/ProductCreation";
 import consult from "views/Filter/filterPage";
-
+import ConseillePage from "views/ConseilleAgri"
 
 var hist = createBrowserHistory();
 
@@ -24,6 +24,8 @@ ReactDOM.render(
       <Route path="/login-page" component={LoginPage} />
       <Route path="/product-page" component={ProductPage} />
       <Route path="/consultProduct-page" component={consult} />
+      <Route path="/conseille-page" component={ConseillePage} />
+
 
       <Route path="/" component={Components} />
     </Switch>

@@ -83,6 +83,7 @@ export default function ProductSection() {
               color="primary"
               size="lg"
               target="_blank"
+               onClick={()=>{history.push("/conseille-page")}}
             >
              Investissez dans {"'"}agriculture
             </Button>

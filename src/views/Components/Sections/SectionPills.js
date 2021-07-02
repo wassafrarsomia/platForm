@@ -61,7 +61,7 @@ export default function SectionPills() {
                       value={region}
                       onChange={(event)=>{setRegion(event.target.value)}}
                     >
-                      <MenuItem value={"Casablanca"}>Casablanca</MenuItem>
+                      <MenuItem value={"Casablanca-Settat"}>Casablanca-Settat</MenuItem>
                     </Select>
                   </FormControl>
         </Grid>
@@ -97,7 +97,7 @@ export default function SectionPills() {
             <strong color="secondary">Prix par kg: </strong> 10 dh <br/><br/>
             <strong color="secondary">Nom de l agriculteur: </strong> Khadija Bayrouk <br/><br/>
             <strong color="secondary">Numero de téléphone: </strong> 0633449878 <br/><br/>
-            <strong color="secondary">Région: </strong> Casablanca <br/></p> 
+            <strong color="secondary">Région: </strong> Casablanca-Settat <br/></p> 
 
             </GridItem>
           </GridContainer>: null } 

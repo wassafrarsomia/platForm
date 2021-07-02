@@ -79,9 +79,7 @@ export default function CustomInput(props) {
                       {...inputProps}
                       onChange={(event)=>{setRegion(event.target.value)}}
                     >
-                      <MenuItem value={"Case"}>Case</MenuItem>
-                      <MenuItem value={"Raba"}>Raba</MenuItem>
-                      <MenuItem value={"Sale"}>Sale</MenuItem>
+                      <MenuItem value={"Casablanca-Settat"}>Casablanca-Settat</MenuItem>
                     </Select>
     </FormControl>
   );
