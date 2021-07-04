@@ -54,7 +54,7 @@ export default function LoginPage() {
                     src={fallahImage}
                      />
             </GridItem>
-            <GridItem xs={12} sm={12} md={12} lg={5}>
+            <GridItem xs={12} sm={12} md={12} lg={5} style={{marginTop:"9%"}}>
             
             <p>Vous êtes intéressés par l{"'"}idée d{"'"}investir dans l{"'"}agriculture et vous 
 
