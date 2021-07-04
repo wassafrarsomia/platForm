@@ -48,14 +48,21 @@ export default function LoginPage() {
                     <h4>Bienvenue sur votre conseille agricole</h4>
                     </CardHeader>
                     <GridContainer>
-            <GridItem xs={12} sm={12} md={8} lg={5}>
+            <GridItem xs={12} sm={12} md={8} lg={4}>
             <img
-            style={{width:"60%", marginBottom:"5%" ,marginLeft:"10%"}}
+            style={{width:"80%", marginBottom:"5%" ,marginLeft:"10%"}}
                     src={fallahImage}
                      />
             </GridItem>
-            <GridItem xs={12} sm={12} md={12} lg={7}>
-            <p></p> 
+            <GridItem xs={12} sm={12} md={12} lg={5}>
+            
+            <p>Vous êtes intéressés par l{"'"}idée d{"'"}investir dans l{"'"}agriculture et vous 
+
+            vous<br/><br/>
+             demandez par où commencer et dans quels produits investir? <br/>
+            <br/>Nous mettons à votre disposition un algorithme de décision susceptible<br/><br/> de vous prédire 
+            le produit ayant la plus grande chance de réussir en <br/><br/>prenant en compte votre région, 
+            l{"'"}actualité sur les marchés régionaux,<br/><br/> les conditions climatiques et la demande. </p>
 
             </GridItem>
           </GridContainer>
